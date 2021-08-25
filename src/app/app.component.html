@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+      <div class="card-header">
+        <ul class="nav nav-pills mb-3 shadow-sm" >
+          <li class="nav-item" *ngFor="let link of routerLinks ; let i=index">
+            <a class="nav-link " [routerLink]="link.route"
+               routerLinkActive="active" >{{link.name}}
+              <button class=" closeBtn" (click)="removeTab(link,i)">×</button>
+            </a>
+          </li>
+          <li class="nav nav-pills mb-3 shadow-sm nav-item dropdown ">
+            <a class="nav-link " data-bs-toggle="dropdown" role="button" aria-expanded="false">&#43;</a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let link of selectDropdownRoutes " (click)="addRoute(link)">
+                <a class="dropdown-item" [routerLink]="link.route">{{link.name}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <div class="tab-content" >
+            <div class="tab-pane fade show active" >
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

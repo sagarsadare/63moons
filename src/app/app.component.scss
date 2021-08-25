@@ -1,0 +1,37 @@
+
+
+.card {
+  //max-width: 25rem;
+  //border: none;
+  border-radius: 0.5rem;
+  padding: 1%;
+  background: #d0e9f3;
+}
+.card-header{
+  background-color: white !important;
+}
+//
+a.active {
+  border-bottom: 2px solid #55c57a
+}
+//
+.nav-link {
+  color: rgb(110, 110, 110);
+  font-weight: 500
+}
+//
+.nav-link:hover {
+  color: #55c57a
+}
+//
+.nav-pills .nav-link.active {
+  color: black;
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 600
+}
+
+.closeBtn{
+  border: none;
+  background: white;
+}
